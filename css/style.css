@@ -8,11 +8,20 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  padding: 0;
-  margin: 0;
+
   /* border: 0; */
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
 /*********переменные*************/
 :root {
   --black-logo-Color: #000000; /* var(--studioColorUP, #000000);*/
@@ -93,7 +102,7 @@ a:focus,
 /**215px+container+215px**
 ******основной контейнер*/
 .container {
-  width: 1170px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -122,7 +131,7 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
+header.section
 /*******LOGO**************/
 
 /*размер контейнера Logo*/
