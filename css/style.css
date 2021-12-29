@@ -1,8 +1,13 @@
 /*********************************/
 /***********default***************/
 /*********************************/
-* {
+html {
   box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
   padding: 0;
   margin: 0;
   /* border: 0; */
@@ -10,22 +15,25 @@
 
 /*********переменные*************/
 :root {
-  --black-logo-Color: #000000;/* var(--studioColorUP, #000000);*/
-  --white-txt-color: #ffffff;
-  --primary-txt-color: #757575;
-  --secondary-txt-color: #212121;
-  --white-bg-color: #ffffff;
-  --primary-bg-color: #2f303a;
-  --secondary-bg-color: #f5f4fa;
-  --primary-link-color: #757575;
-  --secondary-link-color: #212121;
-  --button-accent-color: #188ce8);
-  --primary-accent-color: #2196f3;
-  --secondary-accent-color: #212121;
-  --primary-border-color: #ececec;
-  --secondary-border-color: #eeeeee;  
-  --footer-link-color: rgba(255,255,255,0.6);
-  --h1Color: #ffffff; /*h1 color var(--h1Color,#ffffff);*/
+  --black-logo-Color: #000000; /* var(--studioColorUP, #000000);*/
+  --white-txt-color: #ffffff; /* var(--white-txt-color, #ffffff);*/
+  --primary-txt-color: #757575; /* var(--primary-txt-color, #757575);*/
+  --secondary-txt-color: #212121; /* var(--secondary-txt-color, #212121);*/
+  --white-bg-color: #ffffff; /* var(--white-bg-color, #ffffff);*/
+  --primary-bg-color: #2f303a; /* var(--primary-bg-color, #2f303a);*/
+  --secondary-bg-color: #f5f4fa; /* var(--secondary-bg-color, #f5f4fa);*/
+  --primary-link-color: #757575; /* var(--primary-link-color, #757575);*/
+  --secondary-link-color: #212121; /* var(--secondary-link-color, #212121);*/
+  --button-accent-color: #188ce8; /* var(--button-accent-color, #188ce8);*/
+  --primary-accent-color: #2196f3; /* var(--primary-accent-color, #2196f3);*/
+  --secondary-accent-color: #212121; /* var(--secondary-accent-color, #212121);*/
+  --primary-border-color: #ececec; /* var(--primary-border-color, #ececec);*/
+  --secondary-border-color: #eeeeee; /* var(--secondary-border-color, #eeeeee);*/
+  --footer-link3-color: rgba(255, 255, 255, 0.6);
+  --footer-link-color: #ffffff99;
+  --footer-link2-color: #ffffff9f;
+  --footer-link1-color: rgb(255, 255, 255);
+  --h1Color: #ffffff; /*h1 color var(--h1Color,#ffffff);*/ /* var(--footer-link-color, rgba(255,255,255,0.6));*/
 }
 body {
   color: var(--primary-txt-color, #757575); /**/
@@ -45,7 +53,7 @@ li {
          задаём параметры шрифтов*/
 a {
   text-decoration: none;
-  color: var(--secondary-link-color,#212121);
+  color: var(--secondary-link-color, #212121);
 }
 /*задаём параметры ссылок 
 при наведении или фокусе*/
@@ -86,6 +94,8 @@ a:focus,
 ******основной контейнер*/
 .container {
   width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -103,7 +113,9 @@ footer,
 header {
   /*/height: 80px;*/
   /* display: flex; */
-  border-bottom: 1px solid var(--primary-border-color, #ececec); 
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--primary-border-color, #ececec);
 }
 .for-header {
   display: flex;
@@ -115,9 +127,7 @@ header {
 
 /*размер контейнера Logo*/
 .webstudio {
-  width: 145px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  min-width: 145px;
 }
 .web,
 .studio {
@@ -130,11 +140,14 @@ header {
 }
 /*параметры Logo studio для шапки*/
 .up {
-  color: var(black-logo-Color, #000000);
+  color: var(--black-logo-Color, #000000);
 }
 /*параметры Logo studio для подвала*/
 .down {
-  color: var(--white-txt-color, #fff);
+  color: var(
+    --white-txt-color,
+    #ffffff99
+  ); /*прозрачность 60% в HEX 99 (255 X 0.6 = 153; DEC 153 = HEX 99;)*/
 }
 
 /*******navigation********/
@@ -159,7 +172,7 @@ header {
   justify-content: space-between;
 }
 .address a {
-  color: var(--primary-txt-color,#757575);
+  color: var(--primary-txt-color, #757575);
   font-weight: 500;
 }
 /*****************************/
@@ -368,10 +381,9 @@ address {
   border: 1px solid var(--secondary-border-color, #eeeeee);
   /*box-sizing: border-box;*/
   margin-top: 30px;
-  
+
   /*box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);*/
-  
 }
 .catCard h3,
 .catCard p {
@@ -431,7 +443,7 @@ address {
   bottom: 10px;
 }
 .fixHeader {
-  background-color: var(--white-txt-color,#ffffff);
+  background-color: var(--white-txt-color, #ffffff);
   position: fixed;
   width: 1600px;
 }
