@@ -120,24 +120,21 @@ footer,
 
 /*задаём параметры шапки*/
 header {
-  /*/height: 80px;*/
-  /* display: flex; */
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 25px;
   border-bottom: 1px solid var(--primary-border-color, #ececec);
 }
 .for-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 header.section
 /*******LOGO**************/
 
 /*размер контейнера Logo*/
-.webstudio {
+/*.webstudio {
   min-width: 145px;
-}
+}*/
 .web,
 .studio {
   font-family: "Raleway", sans-serif;
@@ -162,23 +159,25 @@ header.section
 /*******navigation********/
 /*размер контейнера nav*/
 .navigation {
+  display: flex;
+  justify-content: space-between;
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   width: 294px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  right: 100px;
+
+  margin-left: 93px;
 }
 
 /*******address************************/
 
 /*параметры контейнера адрес для шапки*/
 .address {
-  min-width: 307px;
   display: flex;
   justify-content: space-between;
+  min-width: 307px;
+  margin-left: auto;
 }
 .address a {
   color: var(--primary-txt-color, #757575);
