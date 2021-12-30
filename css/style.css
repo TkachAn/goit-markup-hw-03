@@ -118,19 +118,16 @@ footer,
 
 /*задаём параметры шапки*/
 header {
-  /* padding-top: 24px; */
-  /* padding-bottom: 25px; */
   border-bottom: 1px solid var(--primary-border-color, #ececec);
 }
 .for-header {
   display: flex;
   align-items: center;
 }
-header.section
+/*header.section{}*/
 /*******LOGO**************/
 
-
-.web, 
+.web,
 .studio {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
@@ -231,7 +228,7 @@ header.section
 
 .for-Benefits {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-top: 94px;
   margin-bottom: 94px;
 }
@@ -239,6 +236,9 @@ header.section
   width: 270px;
   min-height: 101px;
   /*padding-right: 15px;*/
+}
+.for-Benefits > li + li {
+  margin-left: 30px;
 }
 .BenH3 {
   margin-bottom: 10px;
@@ -253,27 +253,32 @@ header.section
 }
 .for-doing {
   display: flex;
-  justify-content: space-between;
+  margin-top: 50px;
+  /* justify-content: space-between; */
 }
-.heading2 {
-  margin: 94px;
-  margin-bottom: 50px;
+.for-doing > li + li {
+  margin-left: 30px;
 }
 
 /********наша команда*************/
 
 .items {
-  margin-top: 94px;
-  display: flex;
-  flex-direction: column;
   text-align: center;
+  margin-top: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
   background: var(--secondary-bg-color, #f5f4fa);
+}
+.heading2 {
+  margin-bottom: 50px;
 }
 
 .for-items {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 94px;
+  /* justify-content: space-between; */
+}
+.for-items > li + li {
+  margin-left: 30px;
 }
 .card {
   background-color: var(--white-txt-color, #ffffff);
@@ -299,29 +304,26 @@ header.section
 /*********************************/
 
 footer {
-  top: 2097px;
-  height: 252px;
-  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.for-footer {
-  min-width: 231px;
-  height: 81px;
-  margin-top: 60px;
-}
 address {
   margin-top: 20px;
-  color: var(--white-txt-color, #ffffff);
+
   font-style: normal;
-  font-weight: normal;
+  /*font-weight: normal;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.5;*/
+}
+.map {
+  color: var(--white-txt-color, #ffffff);
 }
 .a-dowh {
   color: var(--footer-link-color, rgba(255, 255, 255, 0.6));
 }
 
-.ul li {
+.ul > li {
   margin-top: 9px;
 }
 /*********************************/
