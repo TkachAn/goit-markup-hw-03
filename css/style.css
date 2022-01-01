@@ -16,14 +16,17 @@ h2,
 h3,
 h4,
 h5,
-p,
 ul,
-li {
+li,
+p {
   padding: 0;
   margin: 0;
 }
+
 /*********переменные*************/
 :root {
+  --col: 3;
+  --gap: 30px;
   --black-logo-Color: #000000; /* var(--studioColorUP, #000000);*/
   --white-txt-color: #ffffff; /* var(--white-txt-color, #ffffff);*/
   --primary-txt-color: #757575; /* var(--primary-txt-color, #757575);*/
@@ -76,31 +79,41 @@ a:focus,
 
 /* задаём параметры шрифтов заголовков */
 
-.heading2,
-.heading3 {
+/* .heading2, */
+/* .heading3  */
+h2,
+h3 {
   color: var(--secondary-txt-color, #212121);
   font-weight: 700;
 }
-.heading2 {
+
+/* .heading2  */
+h2 {
   font-size: 36px;
   line-height: 1.17;
+  margin-bottom: 50px;
 }
-.heading3 {
+/* .heading3  */
+h3 {
   font-size: 14px;
   line-height: 1.14;
 }
 
-.heading1 {
+/* .heading1  */
+h1 {
   color: var(--h1Color, #ffffff);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: 30px;
+}
+section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-/**215px+container+215px**
-******основной контейнер*/
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -128,6 +141,10 @@ header {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+.for-header a {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 /*header.section{}*/
 /*******LOGO**************/
@@ -168,6 +185,7 @@ header {
 .navigation > li + li {
   margin-left: 50px;
 }
+
 /*******address************************/
 
 /*параметры контейнера адрес для шапки*/
@@ -178,9 +196,6 @@ header {
 .address a {
   display: block;
   color: var(--primary-txt-color, #757575);
-
-  padding-top: 29px;
-  padding-bottom: 29px;
 }
 .address > li + li {
   margin-left: 50px;
@@ -201,7 +216,6 @@ header {
 
 /*кнопка заказать услугу секции герой*/
 .btnHiro {
-  margin-top: 30px;
   padding: 10px 32px;
 
   border-radius: 4px;
@@ -226,12 +240,12 @@ header {
 .invisible {
   display: none;
 }
-
+.Benefits {
+  padding-bottom: 0;
+}
 .for-Benefits {
   display: flex;
   /* justify-content: space-between; */
-  margin-top: 94px;
-  margin-bottom: 94px;
 }
 .block {
   width: 270px;
@@ -254,7 +268,6 @@ header {
 }
 .for-doing {
   display: flex;
-  margin-top: 50px;
   /* justify-content: space-between; */
 }
 .for-doing > li + li {
@@ -265,13 +278,7 @@ header {
 
 .items {
   text-align: center;
-  margin-top: 94px;
-  padding-top: 94px;
-  padding-bottom: 94px;
   background: var(--secondary-bg-color, #f5f4fa);
-}
-.heading2 {
-  margin-bottom: 50px;
 }
 
 .for-items {
@@ -292,17 +299,24 @@ header {
 .parItem {
   /* font-size: 16px; */
   /* line-height: 1.18; */
+  color: var(--secondary-txt-color, #212121);
+}
+.card > p {
+  padding: 30px 24px;
+  font-size: 16px;
 
-  margin-bottom: 30px;
+  line-height: 0.9;
+  /* line-height: 1; */
 }
 .itm-H3 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.18;
-}
+  display: block;
 
+  font-weight: 500;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
 /*********************************/
 /*************FOOTER**************/
 /*********************************/
@@ -325,7 +339,7 @@ address {
 }
 
 .ul > li + li {
-  margin-left: 30px;
+  margin-top: 9px;
 }
 /*********************************/
 /******конец страницы*************/
@@ -334,28 +348,14 @@ address {
 /*********************************/
 /*********портфолио***************/
 /*********************************/
-.main-portfolio {
-  background-color: var(--white-txt-color, #ffffff);
-  /* margin: 94px auto 0 auto; */
-  margin-top: 94px;
-}
-.portfolio {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /*justify-content: center;*/
 
-  background-color: var(--white-txt-color, #ffffff);
-}
 /*********************************/
 /*********фильтр******************/
 /*********************************/
 .filter {
   display: flex;
-  margin-right: auto;
-  margin-left: auto;
-  /* width: 611px; */
-  /* height: 54px;*/
-  /* margin-bottom: 4px; */
+  justify-content: center;
+  padding-bottom: 50px;
 }
 .filter > li + li {
   margin-left: 8px;
@@ -365,8 +365,6 @@ address {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  /* height: 38px; */
-  /* min-width: 73px; */
   background: var(--bgBtnFilter, #f5f4fa);
   border-radius: 4px;
   padding: 6px 22px;
@@ -374,8 +372,7 @@ address {
   color: var(--secondary-txt-color, #212121);
 
   border: 1px solid var(--secondary-border-color, #eeeeee);
-
-  /* margin: 0px 4px 16px 4px; */
+  /* margin-bottom: 50px; */
 }
 .btnFilter:focus,
 .btnFilter:hover {
@@ -394,32 +391,38 @@ address {
 .catalog {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  /*align-items: flex-end;*/
+  /* justify-content: space-between; */
+  /* align-content: space-around; */
+  margin-top: calc(-1 * var(--gap));
+  margin-left: calc(-1 * var(--gap));
 }
+
 .catCard {
-  height: 404px;
   border: 1px solid var(--secondary-border-color, #eeeeee);
-  /*box-sizing: border-box;*/
-  margin-top: 30px;
-
-  /*box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);*/
+  margin-top: var(--gap);
+  margin-left: var(--gap);
+  flex-basis: calc(100% / var(--col) - var(--gap));
+  /**/
+} /*
+.catCard:nth-child(-n + var(--col)) {
+  margin-top: 0;
+}*/
+.catCard:focus,
+.catCard:hover {
+  box-shadow: /*0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),*/ 0px
+    4px 4px #00000040;
 }
-.catCard h3,
-.catCard p {
-  margin-left: 24px;
-}
-
 .catCard p {
   font-size: 16px;
   line-height: 1.9;
+  padding: 20px 24px;
 }
 .h3catCard {
+  color: var(--secondary-txt-color, #212121);
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-top: 10px;
 }
 /*********************************/
 /******конец страницы*************/
