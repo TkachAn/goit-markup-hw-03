@@ -144,14 +144,15 @@ footer,
 /*задаём параметры шапки*/
 
 header {
+  border-bottom: 1px solid var(--primary-border-color, #ececec);
+}
+header div {
   display: flex;
   align-items: center;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  border-bottom: 1px solid var(--primary-border-color, #ececec);
 }
-
 header a {
   /* display: block; */
   padding-top: 24px;
@@ -206,7 +207,7 @@ header a {
   margin-left: auto;
 }
 
-.address > a {
+.address a {
   /* display: block; */
   color: var(--primary-txt-color, #757575);
 }
@@ -223,8 +224,7 @@ header a {
 
 .hero {
   text-align: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 200px;
 }
 
 /*кнопка заказать услугу секции герой*/
@@ -253,10 +253,6 @@ header a {
   display: none;
 }
 
-.benefits {
-  padding-bottom: 0;
-}
-
 .for-benefits {
   display: flex;
   /* justify-content: space-between; */
@@ -266,6 +262,9 @@ header a {
   width: 270px;
   min-height: 101px;
   /*padding-right: 15px;*/
+}
+.block p {
+  line-height: 1.71;
 }
 
 .for-benefits > li + li {
@@ -281,7 +280,7 @@ header a {
 
 .we-doing {
   text-align: center;
-  /*height: 386px;*/
+  padding-top: 0;
 }
 
 .for-doing {
@@ -360,7 +359,9 @@ address {
 .a-dowh {
   color: var(--footer-link-color, rgba(255, 255, 255, 0.6));
 }
-
+.ul > li {
+  line-height: 1.71;
+}
 .ul > li + li {
   margin-top: 9px;
 }
@@ -379,7 +380,7 @@ address {
 .filter {
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .filter > li + li {
