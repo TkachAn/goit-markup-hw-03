@@ -421,22 +421,24 @@ address {
 .catalog {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
-  /* align-content: space-around; */
-  margin-top: calc(-1 * var(--gap));
-  margin-left: calc(-1 * var(--gap));
+  justify-content: space-between;
+  /* margin-top: calc(-1 * var(--gap)); */
+  /* margin-left: calc(-1 * var(--gap)); */
 }
 
 .catCard {
   border: 1px solid var(--secondary-border-color, #eeeeee);
   margin-top: var(--gap);
-  margin-left: var(--gap);
-  flex-basis: calc(100% / var(--col) - var(--gap));
-  /**/
+  /* margin-left: var(--gap); */
+  /* flex-basis: calc(100% / var(--col)); - var(--gap)) */
+}
+
+.catCard:nth-child(-n + 3) {
+  margin-top: 0;
 }
 /*
-.catCard:nth-child(-n + var(--col)) {
-  margin-top: 0;
+.catCard:nth-child(-3n + 1) {
+  margin-right: 0;
 }*/
 .catCard:focus,
 .catCard:hover {
